@@ -1,9 +1,9 @@
-interface VehicleInterface {
+interface VehicleRequirementsInterface {
  public boolean manufacturingYearIsValid();
  public boolean registration_numberIsValid();
 }
 
-public class Vehicle implements  VehicleInterface
+public class Vehicle implements  VehicleRequirementsInterface
 {
  String registration_number;
  int manufacturing_year;

@@ -1,9 +1,9 @@
-interface PersonInterface {
+interface PersonRequirementsInterface {
     public boolean isOver18();
     public boolean licenseIsValid();
 }
 
-public class Person implements PersonInterface {
+public class Person implements PersonRequirementsInterface {
    String personal_identification_number;
     String first_name;
     String last_name;
