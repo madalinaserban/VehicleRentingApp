@@ -3,15 +3,17 @@ interface VehicleRequirementsInterface {
  public boolean registration_numberIsValid();
 }
 
-public class Vehicle implements  VehicleRequirementsInterface
-{
+public class Vehicle implements  VehicleRequirementsInterface {
  String registration_number;
  int manufacturing_year;
  String brand;
  String colour;
- enum type {HATCHBACK,
-  SEDAN,
-  SUV}
+ Category category;
+ enum Category {
+ SCOOTER,
+  RULOTA,
+  MASINA
+ }
 
 
  @Override
@@ -40,11 +42,13 @@ public class Vehicle implements  VehicleRequirementsInterface
   return colour;
  }
 
- public Vehicle(String registration_number, int manufacturing_year, String brand, String colour) {
+ public Vehicle(String registration_number, Category ty, String brand, int manufacturing_year,String colour) {
   this.registration_number = registration_number;
+  this.category=ty;
   this.manufacturing_year = manufacturing_year;
   this.brand = brand;
   this.colour = colour;
+
  }
 
  public void setRegistration_number(String registration_number) {
@@ -61,5 +65,10 @@ public class Vehicle implements  VehicleRequirementsInterface
 
  public void setColour(String colour) {
   this.colour = colour;
+ }
+
+
+ public void print() {
+  System.out.print(registration_number + " " +category+" "+brand + " " + manufacturing_year + " " + colour);
  }
 }

@@ -8,10 +8,10 @@ public class Person implements PersonRequirementsInterface {
     String first_name;
     String last_name;
     String date_of_birth;
-    char gender; //f sau m
-    short emited_year_of_driving_license;
+    String gender; //f sau m
+    int emited_year_of_driving_license;
 
-    public Person(String personal_identification_number, String first_name, String last_name, String date_of_birth, char gender, short emited_year_of_driving_license) {
+    public Person(String personal_identification_number, String first_name, String last_name, String date_of_birth, String gender, short emited_year_of_driving_license) {
         this.personal_identification_number = personal_identification_number;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -38,7 +38,7 @@ public class Person implements PersonRequirementsInterface {
         this.date_of_birth = date_of_birth;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -63,11 +63,11 @@ public class Person implements PersonRequirementsInterface {
         return date_of_birth;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public short getEmited_year_of_driving_license() {
+    public int getEmited_year_of_driving_license() {
         return emited_year_of_driving_license;
     }
 
